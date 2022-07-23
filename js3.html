@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- What are promises and why do we need them? -->
+A Promise is a proxy for a value not necessarily known when the promise is created. 
+It allows you to associate handlers with an asynchronous action's eventual success value or failure reason.
+1.	Improves Code Readability
+2.	Better handling of asynchronous operations
+3.	Better flow of control definition 
+
+<!-- What is the purpose of async/await keywords? -->
+An async function is a function declared with the async keyword, and the await keyword is
+permitted within it. The async and await keywords enable asynchronous, promise-based behavior 
+to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
+
+<!-- What is hoisting? -->
+It is the default behaviour of moving all the declarations at the top of the scope before code execution.
+
+<!-- What is the DOM? -->
+The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content 
+of a document on the web. 
+The Document Object Model (DOM) is a programming interface for web documents. It represents the
+page so that programs can change the document structure, style, and content. The DOM represents 
+the document as nodes and objects; that way programming languages can interact with the page.
+
+<!-- Difference between undefined vs not defined vs NaN -->
+Undefined - It is a global variable that JavaScript creates at run time. JavaScript assigns
+undefined to any variable that has been declared but not initialized or defined. 
+not defined - A not defined is a variable that is not declared at a given point of time with 
+declaration keyword like var, let, or const.
+NaN - It represents not a number this property indicates that a value is not legitimate number.
+
+<!-- How many operators do we have in JS ? -->
+ 6 types of operators in JS they are :-
+1.Arithmetic Operators
+2.Comparison Operators
+3.Logical Operators
+4.Assignment Operators
+5.Conditional Operators
+6.Ternary Operator
+
+<!-- What are pure functions? -->
+Pure Function is a function (a block of code ) that always returns the same result if the same 
+arguments are passed. It does not depend on any state, or data change during a program’s execution rather it only depends on its input arguments.
+
+<!-- What is callback hell -->
+Callback Hell is an anti-pattern with multiple nested callbacks which makes code hard to read and debug when dealing with asynchronous logic. The callback hell looks like below,
+
+ex - async1(function(){
+    async2(function(){
+        async3(function(){
+            async4(function(){
+                ....
+            });
+        });
+    });
+});
+
+<!-- What is promise chaining -->
+
+The process of executing a sequence of asynchronous tasks one after another using promises is known as Promise chaining. Let's take an example of promise chaining for calculating the final result,
+
+ex- 
+new Promise(function(resolve, reject) {
+
+  setTimeout(() => resolve(1), 1000);
+
+}).then(function(result) {
+
+  console.log(result);
+  return result * 2;
+
+}).then(function(result) {
+
+  console.log(result); 
+  return result * 3;
+
+}).then(function(result) {
+
+  console.log(result); 
+  return result * 4;
+
+});
+
+<!-- What are arrow functions? -->
+It allow you to create functions in a cleaner way camapred to regular function.
+ex - hello = () => {
+    return "Hello World!";
+  }
+  
+<!-- Give an example of async/await   -->
+async function f() {
+
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve("done!"), 1000)
+    });
+  
+    let result = await promise; // wait until the promise resolves (*)
+  
+    alert(result); // "done!"
+  }
+  
+  f();
+
+
+</body>
+</html>
